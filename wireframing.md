@@ -1,20 +1,20 @@
 # App Overview
 
-I am building a money savings application, called iSave, which will allow users to allocate any amount of money to mulitple savings accounts, called pockets, for the items they would like to save up for. 
+I am building a money savings application, called iSave, which will allow users to create multiple savings accounts for a variety of items they would like to save up for. Each item will have own its own separate savings account.
 
 # User Stories
 
 ### As a user, I will be able to:
 
 - sign up, log in, log out
-- create a pocket
-- see all my pockets
-- edit my pockets
-- delete my pockets
+- create a savings account
+- see all my savings accounts
+- edit my savings accounts
+- delete my savings accounts
 
 # Wireframing
 
-## Models will be User and Pocket
+## Models will be User and SavingsAccount
 
 ## User Model
 
@@ -27,10 +27,10 @@ I am building a money savings application, called iSave, which will allow users 
 
 ### Associations:
 
-- has_many :pockets
+- has_many :savings_accounts
 
 
-## Pocket Model
+## SavingsAccount Model
 
 ### Attributes:
 
@@ -47,9 +47,9 @@ I am building a money savings application, called iSave, which will allow users 
 
 # MVP
 
-- User can signup, log in, log out, create, edit, delete and view their own pockets
+- User can signup, log in, log out, create, edit, delete and view their own savings accounts
 
 # Stretch Goals
 
-- User can input amount into app and the funds will allocate a specified amount to each pocket (based on item priority set by user)
+- User can input amount into app and the funds will allocate a specified amount to each savings account (based on item priority set by user)
 - write tests

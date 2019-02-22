@@ -1,57 +1,55 @@
 # App Overview
 
-I am building a money savings application, called iSave, which will allow users to automatically allocate a certain amount of money to various items they would like to save for. 
-
-Users can create multiple items to save for  
-
-A user can specify an exact amount to be allocated to a specific item; or
+I am building a money savings application, called iSave, which will allow users to allocate any amount of money to mulitple savings accounts, called pockets, for the items they would like to save up for. 
 
 # User Stories
 
-## As a user, I can...
+### As a user, I will be able to:
 
 - sign up, log in, log out
-- create a savings folder
-- see all my savings folders
-- edit my savings folder
-- delete my savings folder
+- create a pocket
+- see all my pockets
+- edit my pockets
+- delete my pockets
 
 # Wireframing
 
+## Models will be User and Pocket
 
-## Models will be User and SavingsFolder
+## User Model
 
-
-
-## User
-
-
-### Attributes
+### Attributes:
 
 - name
 - email
 - password (will use bcrypt - 'password_digest' in the db)
+- account_balance
 
-### Associations
+### Associations:
 
-- has_many :savingsfolder
+- has_many :pockets
 
-## SavingsFolder
 
-### Attributes
+## Pocket Model
 
-- content
+### Attributes:
+
+- item
+- price
+- save_by_date (not sure about this attr. priority_level might take care of this)
+- amount_saved
+- priority_level
 - user_id <-- this will be the foreign key
-- date
 
-### Associations
+### Associations:
 
-- belongs_to user
+- belongs_to :user
 
 # MVP
 
-- User can signup, log in, log out, create savings folder, edit their own entries, view their own entries
+- User can signup, log in, log out, create, edit, delete and view their own pockets
 
 # Stretch Goals
 
-- user can allocated specified amount to savings folder
+- User can input amount into app and the funds will allocate a specified amount to each pocket (based on item priority set by user)
+- write tests

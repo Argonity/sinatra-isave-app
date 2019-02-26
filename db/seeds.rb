@@ -12,4 +12,3 @@ SavingsAccount.create(item: "Vacation", price: "2500", priority_level: "High", u
 
 SavingsAccount.create(item: "Louboutin", price: "800", priority_level: "Low", user_id: kelly.id)
 SavingsAccount.create(item: "Artwork", price: "450", priority_level: "Medium", user_id: kelly.id)
-

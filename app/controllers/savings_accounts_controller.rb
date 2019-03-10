@@ -80,7 +80,19 @@ class SavingsAccountsController < ApplicationController
     end
   end
 
-  
+  #DELETE action to delete individual savings account
+  delete '/savings/:id/delete' do
+    if logged_in?
+      @savings = SavingsAccount.find_by_id(params[:id])
+      @user = User.find_by_id(session[:user_id])
+      if @savings && @savings.user == @user
+        @savings.delete
+      end
+      redirect to '/savings'
+    else
+      redirect to '/login'
+    end
+  end
 
 
 end

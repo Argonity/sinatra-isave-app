@@ -30,5 +30,18 @@ class SavingsAccountsController < ApplicationController
     redirect '/savings'
   end
 
+  #GET action to render show page of individual savings account
+  get '/savings/:id' do
+    if logged_in?
+      @savings = SavingsAccount.find_by_id(params[:id])
+      if @savings
+        erb :'savings_accounts/show'
+      end
+    else
+      redirect to '/login'
+    end
+  end
+
+  
 
 end

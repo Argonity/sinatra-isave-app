@@ -1,1 +1,17 @@
-<h1>Insert the form to create a new instance of your model.</h1>
+<h1>Create A New Savings Account</h1>
+
+<form method ="post" action ="/savings">
+    <label>Item:</label>
+    <input type ="text" id="item" name="item">
+    <label>Price:</label>
+    <input type ="text" id="price" name="price">
+    <label>Amount Saved:</label>
+    <input type ="text" id="amount_saved" name="amount_saved">
+    <label>Priority:</label>
+    <select name="priority_level">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <input type ="submit" value="Create">
+</form>

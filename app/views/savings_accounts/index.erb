@@ -1,8 +1,9 @@
-<h3>XXXX</h3>
-
+<h1>Your Savings Accounts</h1>
+#<%= @user.name %> Want to display user's first name
+<br>
 <% @savings.each do |savings| %>
-  <li> <%= savings.item %></li>
-  <li> <%= savings.price %></li>
-  <li> <%= savings.amount_saved %></li>
-  <li> <%= savings.priority_level %></li>
+  <%= savings.item %>
+  <%= savings.price %>
+  <%= savings.amount_saved %>
+  <%= savings.priority_level %>
 <% end %>

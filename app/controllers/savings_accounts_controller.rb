@@ -42,6 +42,19 @@ class SavingsAccountsController < ApplicationController
     end
   end
 
-  
+  #GET action to render edit page of individual savings account
+  get '/savings/:id/edit' do
+    if logged_in?
+      @savings = SavingsAccount.find_by_id(params[:id])
+      @user = User.find_by_id(session[:user_id])
+      if @savings && @savings.user == @user
+        erb :'savings_accounts/edit'
+      else
+        redirect to '/savings'
+      end
+    else
+      redirect to '/login'
+    end
+  end
 
 end

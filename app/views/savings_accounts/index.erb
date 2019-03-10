@@ -1,1 +1,8 @@
-<h1>This is the Model's index page.</h1>
+<h3>XXXX</h3>
+
+<% @savings.each do |savings| %>
+  <li> <%= savings.item %></li>
+  <li> <%= savings.price %></li>
+  <li> <%= savings.amount_saved %></li>
+  <li> <%= savings.priority_level %></li>
+<% end %>

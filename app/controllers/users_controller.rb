@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     end
   end  
 
-  #POST action to retrieve new user from signup form
+  #POST action to signup new user from signup form
   post '/signup' do #users signup with email and password only
     if params[:email] == "" || params[:password] == "" #check if email and password fields are blank
       redirect to '/signup'
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     end
   end
 
-  #GET action to render index page thru the savings_account route
+  #GET action to render login form
   get '/login' do
     if !logged_in? #check if user is not logged in with helper method
       erb :'/users/login' #render login page
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     end
   end
 
-  #POST action to find existing user from login form
+  #POST action to login existing user from login form
   post '/login' do
     @user = User.find_by(name: params[:name]) #find user by name
     if @user && @user.authenticate(params[:password]) #if user name and password found

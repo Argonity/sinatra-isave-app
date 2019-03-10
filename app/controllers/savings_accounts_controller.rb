@@ -3,6 +3,7 @@ class SavingsAccountsController < ApplicationController
   #GET action to render all savings accounts for existing user 
   get '/savings' do
     if logged_in?
+      @user = current_user
       @savings = SavingsAccount.all
       erb :'/savings_accounts/index'
     else

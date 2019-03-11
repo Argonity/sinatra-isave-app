@@ -1,5 +1,7 @@
-<h1>Your Savings Accounts</h1>
-#<%= @user.name %> Want to display user's first name
+<h1><%= @user.name %>'s Savings Accounts</h1>
+<br>
+<a href="/savings/new"><button type="button" class="">Create A New Savings Account</button></a>
+<br>
 <br>
 <% @savings.each do |savings| %>
   <%= savings.item %>

@@ -11,10 +11,10 @@ class UsersController < ApplicationController
 
   #POST action to signup new user from signup form
   post '/signup' do #users signup with email and password only
-    if params[:email] == "" || params[:password] == "" #check if email and password fields are blank
+    if params[:name] == "" || params[:email] == "" || params[:password] == "" #check if email and password fields are blank
       redirect to '/signup'
     else
-      @user = User.new(email: params[:email], password: params[:password]) #retrieve email and password from form and create new user 
+      @user = User.new(name: params[:name], email: params[:email], password: params[:password]) #retrieve name, email, and password from form and create new user 
       @user.save
       session[:user_id] = @user.id #login the user by enabling a session
       redirect to '/savings' #redirect logged in user to savings account route

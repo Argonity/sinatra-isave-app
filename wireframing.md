@@ -53,3 +53,10 @@ I am building a money savings application, called iSave, which will allow users 
 
 - User can input amount into app and the funds will allocate a specified amount to each savings account (based on item priority set by user)
 - write tests
+
+# QUESTIONS
+
+- Why are there items/prices/etc displayed even for new users?
+- User's first names do not appear on savings_accounts index pg.
+- How to clearly display all of a user's savings accounts?
+- Signed in as Brandon but in binding.pry saw another user ie mda2630@aol.com

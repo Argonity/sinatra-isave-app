@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   #POST action to login existing user from login form
   post '/login' do
-    @user = User.find_by(name: params[:name]) #find user by name
+    @user = User.find_by(email: params[:email]) #find user by email
     if @user && @user.authenticate(params[:password]) #if user name and password found
       session[:user_id] = @user.id #login the user by enabling a session
       redirect '/savings'

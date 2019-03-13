@@ -1,14 +1,12 @@
 class SavingsAccountsController < ApplicationController
   
-  ##### CODE HELPER METHOD AND REFACTOR: 'redirect_if_not_logged_in'
-
   #GET action to render all savings accounts for existing user 
   get '/savings' do
     if logged_in?
       @savings = current_user.savings_accounts
       erb :'/savings_accounts/index'
     else
-      redirect '/login'
+      redirect_if_not_logged_in
     end
   end
 
@@ -17,7 +15,7 @@ class SavingsAccountsController < ApplicationController
     if logged_in?
       erb :'/savings_accounts/new'
     else
-      redirect '/login'
+      redirect_if_not_logged_in
     end
   end
 
@@ -40,7 +38,7 @@ class SavingsAccountsController < ApplicationController
         erb :'savings_accounts/show'
       end
     else
-      redirect to '/login'
+      redirect_if_not_logged_in
     end
   end
 
@@ -55,7 +53,7 @@ class SavingsAccountsController < ApplicationController
         redirect to '/savings'
       end
     else
-      redirect to '/login'
+      redirect_if_not_logged_in
     end
   end
 
@@ -78,21 +76,21 @@ class SavingsAccountsController < ApplicationController
         end
       end
     else 
-      redirect to '/login'
+      redirect_if_not_logged_in
     end
   end
 
-  #DELETE action to delete individual savings account
-  delete '/savings/:id/delete' do
+  #GET action to delete individual savings account
+  get '/savings/:id/delete' do
     if logged_in?
       @savings = SavingsAccount.find_by_id(params[:id])
       @user = User.find_by_id(session[:user_id])
       if @savings && @savings.user == @user
-        @savings.delete
+        erb :'savings_accounts/delete'
       end
       redirect to '/savings'
     else
-      redirect to '/login'
+      redirect_if_not_logged_in
     end
   end
 

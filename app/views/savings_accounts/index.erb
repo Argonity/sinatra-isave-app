@@ -1,12 +1,15 @@
-<h1><%= @user.name %>'s Savings Accounts</h1>
+<h1><%= current_user.name %>'s Savings Accounts</h1>
 <br>
 <a href="/savings/new"><button type="button" class="">Create A New Savings Account</button></a>
 <a href="/logout"><button type="button" class="">Logout</button></a>
 <br>
 <br>
 <% @savings.each do |savings| %>
-  <%= savings.item %>
-  <%= savings.price %>
-  <%= savings.amount_saved %>
-  <%= savings.priority_level %>
+  <div style="border: 1px solid grey; height: 125px; width: 200px; float: left; margin: 10px; padding: 10px">
+    <p><%= savings.item %></p>
+    <p><%= savings.price %></p>
+    <p><%= savings.amount_saved %></p>
+    <p><%= savings.priority_level %></p>
+    <p>Edit    Delete</p>
+  </div>
 <% end %>

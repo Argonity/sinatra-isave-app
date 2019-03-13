@@ -37,7 +37,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id #login the user by enabling a session
       redirect '/savings'
     else
-      redirect '/signup' #redirect to signup route if user not found
+      redirect_if_not_logged_in
     end
   end
 

@@ -2,9 +2,8 @@ class SavingsAccountsController < ApplicationController
   
   #GET action to render all savings accounts for existing user 
   get '/savings' do
-    if logged_in?
-      @user = current_user
-      @savings = SavingsAccount.all
+    if logged_in? 
+      @savings = current_user.savings_accounts
       erb :'/savings_accounts/index'
     else
       redirect '/login'

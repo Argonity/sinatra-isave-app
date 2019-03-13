@@ -1,8 +1,10 @@
 class SavingsAccountsController < ApplicationController
   
+  ##### CODE HELPER METHOD AND REFACTOR: 'redirect_if_not_logged_in'
+
   #GET action to render all savings accounts for existing user 
   get '/savings' do
-    if logged_in? 
+    if logged_in?
       @savings = current_user.savings_accounts
       erb :'/savings_accounts/index'
     else

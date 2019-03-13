@@ -1,7 +1,7 @@
 <h1><%= current_user.name %>'s Savings Accounts</h1>
 <br>
 <a href="/savings/new"><button type="button" class="">Create A New Savings Account</button></a>
-<a href="/logout"><button type="button" class="">Logout</button></a>
+<a href="/logout"><button type="button" class="myButton">Logout</button></a>
 <br>
 <br>
 <% @savings.each do |savings| %>
@@ -10,6 +10,7 @@
     <p><%= savings.price %></p>
     <p><%= savings.amount_saved %></p>
     <p><%= savings.priority_level %></p>
-    <p>Edit    Delete</p>
+    <p><a href="/savings/<%=savings.id%>/edit"><button type="button" class="">Edit</button></a>
+        <a href="/savings/<%=savings.id%>/delete"><button type="button" class="">Delete</button></a></p>
   </div>
 <% end %>

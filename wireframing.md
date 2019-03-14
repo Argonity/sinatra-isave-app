@@ -56,7 +56,14 @@ I am building a money savings application, called iSave, which will allow users 
 
 # QUESTIONS
 
-- Why are there items/prices/etc displayed even for new users?
-- User's first names do not appear on savings_accounts index pg.
-- How to clearly display all of a user's savings accounts?
-- Signed in as Brandon but in binding.pry saw another user ie mda2630@aol.com
+- Why are there items/prices/etc displayed even for new users? DONE
+- User's first names do not appear on savings_accounts index pg. DONE
+- How to clearly display all of a user's savings accounts? DONE
+- Signed in as Brandon but in binding.pry saw another user ie mda2630@aol.com DONE
+- Why is 'low' 'medium' 'high' not initial cap? DONE
+- Make all fields required for creating new savings account. Because now if a user only enters item, it goes thru. And if you want to edit that item, you can only edit the fields originally inputted by user, in this case item. DONE
+- REMINDER: security to control access so that another user cannot edit address bar and edit/delete another user's savings account.
+
+Jennifer Pazos:
+10-1 MWF
+TTH 8-11

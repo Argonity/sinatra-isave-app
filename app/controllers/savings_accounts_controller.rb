@@ -87,8 +87,9 @@ class SavingsAccountsController < ApplicationController
       @user = User.find_by_id(session[:user_id])
       if @savings && @savings.user == @user
         erb :'savings_accounts/delete'
-      end
+      else
       redirect to '/savings'
+      end
     else
       redirect_if_not_logged_in
     end

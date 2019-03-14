@@ -4,13 +4,13 @@
 <div>
 <form method ="post" action ="/savings">
     <label>Item:</label>
-    <input type ="text" id="item" name="item">
+    <input type ="text" id="item" name="item" required>
     <label>Price:</label>
-    <input type ="text" id="price" name="price">
+    <input type ="text" id="price" name="price" required>
     <label>Amount Saved:</label>
-    <input type ="text" id="amount_saved" name="amount_saved">
+    <input type ="text" id="amount_saved" name="amount_saved" required>
     <label>Priority:</label>
-    <select name="priority_level">
+    <select name="priority_level" required>
       <option value=""></option>
       <option value="Low">Low</option>
       <option value="Medium">Medium</option>

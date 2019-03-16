@@ -47,8 +47,7 @@ class SavingsAccountsController < ApplicationController
   get '/savings/:id/edit' do
     if logged_in?
       @savings = SavingsAccount.find_by_id(params[:id])
-      @user = User.find_by_id(session[:user_id])
-      if @savings && @savings.user == @user
+      if @savings && @savings.user == current_user
         erb :'savings_accounts/edit'
       else
         redirect to '/savings'
@@ -82,8 +81,7 @@ class SavingsAccountsController < ApplicationController
   get '/savings/:id/delete' do
     if logged_in?
       @savings = SavingsAccount.find_by_id(params[:id])
-      @user = User.find_by_id(session[:user_id])
-      if @savings && @savings.user == @user
+      if @savings && @savings.user == current_user
         erb :'savings_accounts/delete'
       else
       redirect to '/savings'

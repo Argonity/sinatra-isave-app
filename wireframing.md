@@ -67,6 +67,7 @@ I am building a money savings application, called iSave, which will allow users 
 - Priority level value not showing on edit form.
 - Converting price and amount_saved inputs with comma.
 - Add functionality to route to Home Page; button or link.
+- Add logo w/ link to every page so user can route home.
 
 
 Jennifer Pazos:

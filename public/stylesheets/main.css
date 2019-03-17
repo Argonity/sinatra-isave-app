@@ -13,7 +13,7 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: rgb(188, 215, 219);
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
@@ -31,6 +31,7 @@
   }
 
   h1 {
+    border-bottom: 2px solid #ccc;
     font-size: 36px;
     line-height: 54px;
   }
@@ -156,7 +157,26 @@
 	top:1px;
 }
 
+/* --- Input Box Styles --- */
 input {
   font-size: 14px;
   line-height: 28px;
+}
+
+/* --- Logo Styles --- */
+img {
+  float: left; 
+  width: 85px;
+  height: 85px;
+}
+
+center div {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  height: 175px; 
+  width: 175px; 
+  float: left; 
+  margin: 10px; 
+  padding: 10px; 
+  background-color: #d7dbdd;
 }

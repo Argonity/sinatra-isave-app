@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  # Helper methods to validate whether a user is logged in
+  # Helper methods
   helpers do 
 		def logged_in?
 			!!session[:user_id]
@@ -28,6 +28,11 @@ class ApplicationController < Sinatra::Base
         redirect "/login"
       end
     end
+
+    def add_commas(amount)
+      amount.reverse.scan(/\d{3}|.+/).join(",").reverse
+    end
+
 	end
 
 end

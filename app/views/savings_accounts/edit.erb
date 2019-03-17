@@ -1,4 +1,4 @@
-<h2> Edit This Savings Account </h2>
+<p><a href="/"><img src="images/isave_logo.png" alt="iSave Logo"></a><h1>Edit This Savings Account</h1></p>
 
 <form method="post" action="/savings/<%=@savings.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
@@ -16,6 +16,7 @@
       <option value="High">High</option>
     </select>
     <input type ="submit" class="myButton" value="Update">
+    <a href="/savings"><button type="button" class="myButton">Cancel</button></a>
 </form>
 
     

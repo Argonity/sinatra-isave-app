@@ -62,14 +62,15 @@ I am building a money savings application, called iSave, which will allow users 
 - Signed in as Brandon but in binding.pry saw another user ie mda2630@aol.com DONE
 - Why is 'low' 'medium' 'high' not initial cap? DONE
 - Make all fields required for creating new savings account. Because now if a user only enters item, it goes thru. And if you want to edit that item, you can only edit the fields originally inputted by user, in this case item. DONE
-- Security to control access so that another user cannot edit address bar and edit/delete another user's savings account.DONE
+- Security to control access so that another user cannot edit address bar and edit/delete another user's savings account. DONE
+- Add functionality to route to Home Page; button or link. DONE
 
+PENDING:
 - Priority level value not showing on edit form.
 - Converting price and amount_saved inputs with comma.
-- Add functionality to route to Home Page; button or link.
 - Add logo w/ link to every page so user can route home.
 
-
+Sinatra Tech Coach:
 Jennifer Pazos:
 10-1 MWF
 TTH 8-11

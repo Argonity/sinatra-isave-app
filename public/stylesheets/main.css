@@ -13,7 +13,7 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: rgb(188, 215, 219);
+    background-color: #bcd7db;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
@@ -170,13 +170,25 @@ img {
   height: 85px;
 }
 
+/* --- Savings Account Display Box Styles --- */
 center div {
   border: 1px solid lightgrey;
   border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 175px; 
   width: 175px; 
   float: left; 
-  margin: 10px; 
+  margin: 20px; 
   padding: 10px; 
   background-color: #d7dbdd;
+}
+
+/* --- Dropdown Priority Level Styles --- */
+select {
+  -webkit-appearance: none;
+  position: relative;
+  font-size: 14px;
+  line-height: 28px;
+  width: 175px;
+  background-color: #e5eef0;
 }

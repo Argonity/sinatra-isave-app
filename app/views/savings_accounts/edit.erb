@@ -10,13 +10,16 @@
     <input type ="text" id="amount_saved" name="amount_saved" value="<%= @savings.amount_saved %>" required>
     <label>Priority</label>
     <select id="priority_level" name="priority_level" required>
-      <option value="<%= @savings.priority_level %>"></option>
+      <option value="" selected><%= @savings.priority_level %></option>
+      <option value="">--------</option>
       <option value="Low">Low</option>
       <option value="Medium">Medium</option>
       <option value="High">High</option>
     </select>
-    <input type ="submit" class="myButton" value="Update">
-    <a href="/savings"><button type="button" class="myButton">Cancel</button></a>
+    <br>
+    <br>
+    <p><input type ="submit" class="myButton" value="Update">
+    <a href="/savings"><button type="button" class="myButton">Cancel</button></a></p>
 </form>
 
     

@@ -69,6 +69,8 @@ PENDING:
 - Priority level value not showing on edit form.
 - Converting price and amount_saved inputs with comma.
 - Add logo w/ link to every page so user can route home.
+- No one is logged in and clicking on the logo to go to home page returns error. Check get '/' code in app controller.
+- Delete page CSS styling for buttons.
 
 Sinatra Tech Coach:
 Jennifer Pazos:

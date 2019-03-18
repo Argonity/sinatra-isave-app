@@ -8,7 +8,8 @@
     <p><%= @savings.priority_level %></p>
     <form method="post" action="/savings/<%=@savings.id%>/delete">
       <input id="hidden" type="hidden" name="_method" value="Delete">
-      <input class="myButton" type="submit" value="Delete">
+      <input class="myButton" style="float:left;" type="submit" value="Delete">
+      <br>
       <a href="/savings"><button type="button" class="myButton">Cancel</button></a>
     </form>
   </div>

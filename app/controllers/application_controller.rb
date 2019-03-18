@@ -10,7 +10,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    if logged_in?
+      @savings = current_user.savings_accounts
+      erb :index
+    else
+      erb :index
+    end
   end
 
   # Helper methods

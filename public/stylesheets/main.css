@@ -137,7 +137,7 @@
 	color:#5b737e;
 	font-family:Arial;
 	font-size:15px;
-	padding:6px 24px;
+	padding:6px 20px;
 	text-decoration:none;
   text-shadow:0px 1px 0px #ffffff;
   line-height: 18px;
@@ -174,7 +174,7 @@ img {
 center div {
   border: 1px solid lightgrey;
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
   height: 175px; 
   width: 175px; 
   float: left; 

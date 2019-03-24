@@ -60,18 +60,14 @@ class SavingsAccountsController < ApplicationController
   #PATCH action to edit individual savings account
   patch '/savings/:id' do
     if logged_in?
-      # if params[:item] == "" || params[:price] == "" || params[:amount_saved] == "" || params[:priority_level] == ""
-      #   redirect to "/savings/#{params[:id]}/edit"
-      # else
-        @savings = SavingsAccount.find_by_id(params[:id])
-        @user = User.find_by_id(session[:user_id])
+      @savings = SavingsAccount.find_by_id(params[:id])
+      @user = User.find_by_id(session[:user_id])
         if @savings && @savings.user == @user
             @savings.update(item: params[:item], price: params[:price], amount_saved: params[:amount_saved], priority_level: params[:priority_level])
             redirect to "/savings" #redirect to /savings, not /savings/#{@savings.id}
         else 
           redirect to "/savings/#{@savings.id}/edit"
         end
-      # end
     else 
       redirect_if_not_logged_in
     end

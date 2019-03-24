@@ -1,13 +1,14 @@
-<p><a href="/"><img src="images/isave_logo.png" alt="iSave Logo"></a><h1><%= current_user.name %>'s Savings Accounts
-<a href="/logout"><button type="button" class="myButton" style="float:right;">Logout</button></a></h1></p>
+<p><h1><%= current_user.name %>'s Savings Accounts
+<a href="/logout"><button type="button" class="myButton" style="float:right;">Logout</button></a>
+<a href="/savings"><button type="button" class="myButton" style="float:right;"><%= current_user.name %></button></a></h1></p>
 <br>
-<a href="/savings/new"><button type="button" class="myButton">Create A New Savings Account</button></a>
+<a href="/savings/new"><button type="button" class="myButton" style="margin-left:20px;">Create A New Savings Account</button></a>
 <br>
 <br>
 <% @savings.each do |savings| %>
   <center>
     <div style="">
-      <p><%= savings.item %></p>
+      <p><b><%= savings.item %></b></p>
       <p>$<%= savings.price %></p>
       <p>$<%= savings.amount_saved %></p>
       <p><%= savings.priority_level %></p>

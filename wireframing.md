@@ -64,13 +64,14 @@ I am building a money savings application, called iSave, which will allow users 
 - Make all fields required for creating new savings account. Because now if a user only enters item, it goes thru. And if you want to edit that item, you can only edit the fields originally inputted by user, in this case item. DONE
 - Security to control access so that another user cannot edit address bar and edit/delete another user's savings account. DONE
 - Add functionality to route to Home Page; button or link. DONE
+- Priority level value not showing on edit form. DONE
+- No one is logged in and clicking on the logo to go to home page returns error. Check get '/' code in app controller. DONE
+- Logo not appearing on all pages. DONE
+- Delete page CSS styling for buttons. DONE
 
 PENDING:
-- Priority level value not showing on edit form.
 - Converting price and amount_saved inputs with comma.
-- Add logo w/ link to every page so user can route home.
-- No one is logged in and clicking on the logo to go to home page returns error. Check get '/' code in app controller.
-- Delete page CSS styling for buttons.
+- Two users cannot have the same email.
 
 Sinatra Tech Coach:
 Jennifer Pazos:

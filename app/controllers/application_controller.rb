@@ -11,7 +11,6 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     if logged_in?
-      @savings = current_user.savings_accounts
       erb :index
     else
       erb :index

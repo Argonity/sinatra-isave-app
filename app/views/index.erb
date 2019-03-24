@@ -1,6 +1,12 @@
-<p><a href="/"><img src="images/isave_logo.png" alt="iSave Logo"></a><h1>iSave 
-<a href="/logout"><button type="button" class="myButton" style="float:right;">Logout</button></a>
-<a href="/savings"><button type="button" class="myButton" style="float:right;">Logged In As <%= current_user.name %></button></a></h1></p>
+<p><h1>iSave</h1>
+
+<% if logged_in? %>
+  <a href="/logout"><button type="button" class="myButton" style="float:right;">Logout</button></a>
+  <a href="/savings"><button type="button" class="myButton" style="float:right;">
+  <%= current_user.name %>
+  </button></a></p>
+<% end %>
+
 <br>
 <p>This is a money savings application built with Ruby and Sinatra.</p>
 <br>

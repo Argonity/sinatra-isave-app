@@ -1,14 +1,15 @@
-<p><a href="/"><img src="images/isave_logo.png" alt="iSave Logo"></a><h1>Create A New Savings Account</h1></p>
-<br>
+<p><h1>Create A New Savings Account
+<a href="/logout"><button type="button" class="myButton" style="float:right;">Logout</button></a>
+<a href="/savings"><button type="button" class="myButton" style="float:right;"><%= current_user.name %></button></a></h1></p>
 <br>
 <div>
 <form method ="post" action ="/savings">
     <label>Item</label>
-    <input type ="text" id="item" name="item" required>
+    <input type="text" id="item" name="item" required>
     <label>Price</label>
-    <input type ="text" id="price" name="price" required>
+    <input type="number" id="price" name="price" required>
     <label>Amount Saved</label>
-    <input type ="text" id="amount_saved" name="amount_saved" required>
+    <input type="number" id="amount_saved" name="amount_saved" required>
     <label>Priority</label>
       <select name="priority_level" required>
         <option value=""></option>

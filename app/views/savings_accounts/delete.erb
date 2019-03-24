@@ -1,17 +1,18 @@
-<p>Are you sure you want to delete this savings account?</p>
+<p><h1>Delete this savings account?
+<a href="/logout"><button type="button" class="myButton" style="float:right;">Logout</button></a>
+<a href="/savings"><button type="button" class="myButton" style="float:right;"><%= current_user.name %></button></a></h1></p>
 
 <center>
   <div>
-    <p><%= @savings.item %></p>
+    <p><b><%= @savings.item %></b></p>
     <p>$<%= @savings.price %></p>
     <p>$<%= @savings.amount_saved %></p>
     <p><%= @savings.priority_level %></p>
     <form method="post" action="/savings/<%=@savings.id%>/delete">
       <input id="hidden" type="hidden" name="_method" value="Delete">
       <input class="myButton" style="float:left;" type="submit" value="Delete">
-      <br>
-      <a href="/savings"><button type="button" class="myButton">Cancel</button></a>
     </form>
+    <a href="/savings"><button type="button" class="myButton" style="">Cancel</button></a>
   </div>
 </center>
 

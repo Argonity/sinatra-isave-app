@@ -10,11 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    if logged_in?
-      erb :index
-    else
-      erb :index
-    end
+    erb :index
   end
 
   # Helper methods

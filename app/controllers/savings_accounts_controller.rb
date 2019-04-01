@@ -101,5 +101,4 @@ class SavingsAccountsController < ApplicationController
     end
   end
 
-
 end

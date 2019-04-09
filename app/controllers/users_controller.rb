@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   #POST action to signup new user from signup form
   post '/signup' do #users signup with email and password only
-    if params[:name] == "" || params[:email] == "" || params[:password] == "" #check if email and password fields are blank
+    if params[:name] == "" || params[:email] == "" || params[:password] == "" || User.find_by(email: params[:email]) #check if email and password fields are blank
       redirect to '/signup'
     else
       @user = User.new(name: params[:name], email: params[:email], password: params[:password]) #retrieve name, email, and password from form and create new user 

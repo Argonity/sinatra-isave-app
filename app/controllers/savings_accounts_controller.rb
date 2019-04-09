@@ -2,21 +2,15 @@ class SavingsAccountsController < ApplicationController
   
   #GET action to render all savings accounts for existing user 
   get '/savings' do
-    if logged_in?
-      @savings = current_user.savings_accounts
-      erb :'/savings_accounts/index'
-    else
-      redirect_if_not_logged_in
-    end
+    redirect_if_not_logged_in
+    @savings = current_user.savings_accounts
+    erb :'/savings_accounts/index'
   end
 
   #GET action to render form to create a new savings account
   get '/savings/new' do
-    if logged_in?
-      erb :'/savings_accounts/new'
-    else
-      redirect_if_not_logged_in
-    end
+    redirect_if_not_logged_in
+    erb :'/savings_accounts/new'
   end
 
   #POST action to create a new savings account
@@ -24,7 +18,7 @@ class SavingsAccountsController < ApplicationController
     if params[:item] == "" || params[:price] == "" || params[:amount_saved] == "" || params[:priority_level] == ""
       redirect '/savings/new'
     else
-      @user = User.find_by_id(session[:user_id])
+      @user = User.find_by_id(session[:user_id]) #same as current_user helper method
       SavingsAccount.create(item: params[:item], price: params[:price], amount_saved: params[:amount_saved], priority_level: params[:priority_level], user_id: @user.id)
     end
     redirect '/savings'
@@ -59,17 +53,13 @@ class SavingsAccountsController < ApplicationController
 
   #PATCH action to edit individual savings account
   patch '/savings/:id' do
-    if logged_in?
-      @savings = SavingsAccount.find_by_id(params[:id])
-      @user = User.find_by_id(session[:user_id])
-        if @savings && @savings.user == @user
-            @savings.update(item: params[:item], price: params[:price], amount_saved: params[:amount_saved], priority_level: params[:priority_level])
-            redirect to "/savings" #redirect to /savings, not /savings/#{@savings.id}
-        else 
-          redirect to "/savings/#{@savings.id}/edit"
-        end
-    else 
-      redirect_if_not_logged_in
+    redirect_if_not_logged_in
+    @savings = SavingsAccount.find_by_id(params[:id])
+      if @savings && @savings.user == current_user
+        @savings.update(item: params[:item], price: params[:price], amount_saved: params[:amount_saved], priority_level: params[:priority_level])
+        redirect to "/savings" #redirect to /savings, not /savings/#{@savings.id}
+      else 
+      redirect to "/savings/#{@savings.id}/edit"
     end
   end
 

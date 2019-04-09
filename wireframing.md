@@ -68,10 +68,10 @@ I am building a money savings application, called iSave, which will allow users 
 - No one is logged in and clicking on the logo to go to home page returns error. Check get '/' code in app controller. DONE
 - Logo not appearing on all pages. DONE
 - Delete page CSS styling for buttons. DONE
+- Two users cannot have the same email. Check for uniquness of email. See 'Celine' as example. It will find the first instance of that email and try to connect the password to that email. DONE
 
 PENDING:
 - Converting price and amount_saved inputs with comma.
-- Two users cannot have the same email.
 
 Sinatra Tech Coach:
 Jennifer Pazos:
